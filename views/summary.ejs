@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Weather Summary</title>
+</head>
+<body>
+    <h1>Daily Weather Summary</h1>
+    <table border="1">
+        <tr>
+            <th>City</th>
+            <th>Avg Temp (°C)</th>
+            <th>Max Temp (°C)</th>
+            <th>Min Temp (°C)</th>
+        </tr>
+        <% summaries.forEach(summary => { %>
+            <tr>
+                <td><%= summary._id %></td>
+                <td><%= summary.avgTemp.toFixed(2) %></td>
+                <td><%= summary.maxTemp.toFixed(2) %></td>
+                <td><%= summary.minTemp.toFixed(2) %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
